@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(videoBox);
 
   // Initialize AOS
-  AOS.init();
+  AOS.init({ disable: 'mobile' });
 });
 // -------------------------------------------------
 
