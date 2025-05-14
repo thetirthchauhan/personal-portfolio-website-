@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+  <title>Tirth Chauhan Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Orbitron:wght@400;700&family=Lato:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="#" class="logo">Tirth Chauhan</a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">☰</div>
+  </nav>
+
+  <section class="hero">
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="role-containerH">Hello, I'm</div>
+        <div class="greeting" id="greeting"></div>
+        <h2 class="neon-glow">Tirth Chauhan</h2>
+        <div class="role-container">
+          I'm a <span class="typing-text"></span>
+        </div>
+        <div class="cta-buttons">
+
+          <button type="button" class="btn" onclick="window.open('assets/resume tirthc.pdf', '_blank')">
+            <strong>VIEW RESUME</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+        <div class="image-container">
+          <img src="assets/profile.png" alt="Tirth" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <div class="about-text-wrapper">
+        <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <h2>WHO I AM?</h2>
+          <p>
+            My name is Tirth, I am a B.Tech CSE student with a solid
+            foundation in Computer Engineering. With hands-on experience in
+            web development, UI/UX design, and a growing interest in AI and
+            ML, I focus on creating easy-to-use digital experiences. My goal
+            is to build solutions that solve real-world problems and shape the
+            future of technology.
+          </p>
+        </div>
+      </div>
+      <div class="code-editor-wrapper">
+        <div class="book" onclick="toggleBook(this)">
+          <div class="content">
+            <code class="code">
+                <p><span class="color-0">{</span></p>
+                <p class="property">
+                  <span class="color-2">"name"</span><span>:</span>
+                  <span class="color-1">"Tirth Chauhan"</span>,
+                </p>
+                <p class="property">
+                  <span class="color-2">"email"</span><span>:</span>
+                  <a href="mailto:thetirthc@gmail.com" class="color-1"
+                    >"thetirthc@gmail.com"</a
+                  ><span>,</span>
+                </p>
+
+                <p class="property">
+                  <span class="color-2">"skills"</span><span>:</span>
+                  <span class="color-0">[</span>
+                </p>
+                <p class="property">
+                  <span class="color-1">"Web Development"</span>,
+                </p>
+                <p class="property">
+                  <span class="color-1">"Problem Solving"</span>,
+                </p>
+                <p class="property">
+                  <span class="color-1">"Concept Development"</span>
+                </p>
+                <p class="property">
+                  <span class="color-0">]</span>
+                </p>
+                <p><span class="color-0">}</span></p>
+              </code>
+          </div>
+          <div class="cover">
+            <div class="terminal-header">
+              <div class="terminal-title">Status</div>
+              <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+              </div>
+            </div>
+            <div class="cover-text">
+              <p>Tap here to view status</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-label-wrapper" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+        <button class="button">About Me</button>
+      </div>
+    </div>
+
+    <div class="skills-section" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+      <div class="skills-heading-box">
+        <button class="button">Skills</button>
+      </div>
+      <div class="skills-scroll">
+        <div class="skills-scroll-content">
+
+          <!-- html -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML" />
+              <p class="text">HTML</p>
+            </div>
+          </div>
+
+
+          <!-- css -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS" />
+              <p class="text">CSS</p>
+            </div>
+          </div>
+
+          <!-- javascript -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" />
+              <p class="text">JavaScript</p>
+            </div>
+          </div>
+
+          <!-- c -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                alt="C" />
+              <p class="text">C</p>
+            </div>
+          </div>
+
+          <!-- c++ -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+              <p class="text">C++</p>
+            </div>
+          </div>
+
+          <!-- react -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React" />
+              <p class="text">React</p>
+            </div>
+          </div>
+
+          <!-- nodejs -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+              <p class="text">Node.js</p>
+            </div>
+          </div>
+
+          <!-- python -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <p class="text">Python</p>
+            </div>
+          </div>
+
+          <!-- git -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git" />
+              <p class="text">Git</p>
+            </div>
+          </div>
+
+          <!-- flutter -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
+              <p class="text">Flutter</p>
+            </div>
+          </div>
+
+          <!-- java -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java" />
+              <p class="text">Java</p>
+            </div>
+          </div>
+
+          <!-- mongodb -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+              <p class="text">MongoDB</p>
+            </div>
+          </div>
+
+
+
+
+          <!-- html -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML" />
+              <p class="text">HTML</p>
+            </div>
+          </div>
+
+
+          <!-- css -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS" />
+              <p class="text">CSS</p>
+            </div>
+          </div>
+
+          <!-- javascript -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" />
+              <p class="text">JavaScript</p>
+            </div>
+          </div>
+
+          <!-- c -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                alt="C" />
+              <p class="text">C</p>
+            </div>
+          </div>
+
+          <!-- c++ -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+              <p class="text">C++</p>
+            </div>
+          </div>
+
+          <!-- react -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React" />
+              <p class="text">React</p>
+            </div>
+          </div>
+
+          <!-- nodejs -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+              <p class="text">Node.js</p>
+            </div>
+          </div>
+
+          <!-- python -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <p class="text">Python</p>
+            </div>
+          </div>
+
+          <!-- git -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git" />
+              <p class="text">Git</p>
+            </div>
+          </div>
+
+          <!-- flutter -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
+              <p class="text">Flutter</p>
+            </div>
+          </div>
+
+          <!-- java -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java" />
+              <p class="text">Java</p>
+            </div>
+          </div>
+
+          <!-- mongodb -->
+          <div class="package">
+            <div class="package2">
+              <img class="skill-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+              <p class="text">MongoDB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="experience-section" id="experience">
+    <div class="experience-heading-box" data-aos="fade-down" data-aos-duration="500" data-aos-once="true">
+      <button class="button">Experience</button>
+    </div>
+    <div class="experience-content">
+      <div class="book-animation" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+        <div class="loader">
+          <div class="book">
+            <div class="page"></div>
+            <div class="page page2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="experience-text" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+        <h2>
+          <span class="highlight">4</span> Years of Designing & Developing for Web & AI
+
+        </h2>
+        <p>
+          Over the past 4 years, I’ve been coding, building projects, and participating in hackathons to sharpen my
+          skills. Now, I'm working on advanced projects, exploring AI, blockchain, and scalable systems to drive
+          innovation.
+        </p>
+        <ul class="experience-list">
+          <li>Completed 3 Hackathons with Team Collaboration.</li>
+          <li>Completed 2 internship with certificate.
+          </li>
+          <li>Built and Deployed Projects from Diploma to Present, Successfully Running Live Applications.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="projects-section" id="projects">
+    <div class="projects-heading-box" data-aos="fade-down" data-aos-duration="500" data-aos-once="true">
+      <button class="button">Projects</button>
+    </div>
+    <div class="projects-content" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <div class="projects-container">
+        <div class="card">
+          <div class="video-description" id="video-description"></div>
+          <div class="video-container">
+            <div class="video-box" id="video-box">
+              <video class="project-video" autoplay loop muted preload="metadata" loading="lazy">
+                <source src="assets/comming video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-menu">
+              <div class="container">
+                <div class="card" data-project="1">1</div>
+                <div class="card" data-project="2">2</div>
+                <div class="card" data-project="3">3</div>
+                <div class="card" data-project="4">4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="education-section" id="education">
+    <div class="education-heading-box" data-aos="fade-down" data-aos-duration="500" data-aos-once="true">
+      <button class="button">Education</button>
+    </div>
+    <div class="education-cards">
+      <div class="edu-row">
+        <div class="edu-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="edu-loader"></div>
+          <div class="card-info">
+            <p class="title">Secondary</p>
+            <p class="description">
+              Completed 10th from Mahatma Gandhi School, Rajkot. </p>
+          </div>
+        </div>
+        <div class="edu-card" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="edu-loader"></div>
+          <div class="card-info">
+            <p class="title">Diploma</p>
+            <p class="description">
+              Completed Diploma in Computer Engineering from A. V. Parekh Technical Institute Rajkot
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="edu-row">
+        <div class="edu-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+          <div class="edu-loader"></div>
+          <div class="card-info">
+            <p class="title">B.Tech</p>
+            <p class="description">
+              Currently pursuing a B.Tech in Computer Science and Engineering
+              at Darshan University.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="contact-section" id="contact">
+    <div class="contact-heading-box" data-aos="fade-down" data-aos-duration="500" data-aos-once="true">
+      <button class="button">Contact Me</button>
+    </div>
+    <div class="contact-content">
+      <div class="contact-wrapper">
+        <div class="form-container" data-aos="fade-left" data-aos-duration="400" data-aos-once="true">
+          <div class="quantum-grid-container">
+            <div class="energy-lines">
+              <div class="line line-1"></div>
+              <div class="line line-4"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+              <div class="line line-4"></div>
+            </div>
+            <form id="contact-form" class="quantum-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="01f2fba7-730e-44f4-a3aa-a08294f31c75" />
+              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+              <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+              <span class="link-text">Get in touch with me</span>
+
+              <div class="quantum-node">
+                <label for="name" class="quantum-label">Name</label>
+                <div class="node-core">
+                  <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="off" required />
+                </div>
+              </div>
+              <div class="quantum-node">
+                <label for="email" class="quantum-label">E-Mail I.D.</label>
+                <div class="node-core">
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+              <div class="quantum-node">
+                <label for="phone" class="quantum-label">Phone Number</label>
+                <div class="node-core">
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}"
+                    maxlength="10" required />
+                </div>
+              </div>
+              <div class="quantum-node">
+                <label for="subject" class="quantum-label">Subject</label>
+                <div class="node-core">
+                  <input type="text" id="subject" name="subject" placeholder="Enter the subject" required />
+                </div>
+              </div>
+              <div class="quantum-node">
+                <label for="message" class="quantum-label">Message</label>
+                <div class="node-core">
+                  <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                </div>
+              </div>
+              <div class="quantum-core-wrapper">
+                <button type="button" onclick="validateForm()" class="quantum-core">
+                  <div class="core-outline"></div>
+                  <div class="core-state core-state--default">
+                    <div class="core-icon">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="filter: url(#shadow)">
+                          <path
+                            d="M14.2199 21.63C13.0399 21.63 11.3699 20.8 10.0499 16.83L9.32988 14.67L7.16988 13.95C3.20988 12.63 2.37988 10.96 2.37988 9.78001C2.37988 8.61001 3.20988 6.93001 7.16988 5.60001L15.6599 2.77001C17.7799 2.06001 19.5499 2.27001 20.6399 3.35001C21.7299 4.43001 21.9399 6.21001 21.2299 8.33001L18.3999 16.82C17.0699 20.8 15.3999 21.63 14.2199 21.63ZM7.63988 7.03001C4.85988 7.96001 3.86988 9.06001 3.86988 9.78001C3.86988 10.5 4.85988 11.6 7.63988 12.52L10.1599 13.36C10.3799 13.43 10.5599 13.61 10.6299 13.83L11.4699 16.35C12.3899 19.13 13.4999 20.12 14.2199 20.12C14.9399 20.12 16.0399 19.13 16.9699 16.35L19.7999 7.86001C20.3099 6.32001 20.2199 5.06001 19.5699 4.41001C18.9199 3.76001 17.6599 3.68001 16.1299 4.19001L7.63988 7.03001Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M10.11 14.4C9.92005 14.4 9.73005 14.33 9.58005 14.18C9.29005 13.89 9.29005 13.41 9.58005 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z"
+                            fill="currentColor"></path>
+                        </g>
+                        <defs>
+                          <filter id="shadow">
+                            <fedropshadow dx="0" dy="1" stdDeviation="0.6" flood-opacity="0.5"></fedropshadow>
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <p>
+                      <span style="--i:0">S</span>
+                      <span style="--i:1">e</span>
+                      <span style="--i:2">n</span>
+                      <span style="--i:3">d</span>
+                      <span style="--i:4">M</span>
+                      <span style="--i:5">e</span>
+                      <span style="--i:6">s</span>
+                      <span style="--i:7">s</span>
+                      <span style="--i:8">a</span>
+                      <span style="--i:9">g</span>
+                      <span style="--i:10">e</span>
+                    </p>
+                  </div>
+                  <div class="core-state core-state--sent">
+                    <div class="core-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1em" width="1em"
+                        stroke-width="0.5px" stroke="black">
+                        <g style="filter: url(#shadow)">
+                          <path fill="currentColor"
+                            d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z">
+                          </path>
+                          <path fill="currentColor"
+                            d="M10.5795 15.5801C10.3795 15.5801 10.1895 15.5001 10.0495 15.3601L7.21945 12.5301C6.92945 12.2401 6.92945 11.7601 7.21945 11.4701C7.50945 11.1801 7.98945 11.1801 8.27945 11.4701L10.5795 13.7701L15.7195 8.6301C16.0095 8.3401 16.4895 8.3401 16.7795 8.6301C17.0695 8.9201 17.0695 9.4001 16.7795 9.6901L11.1095 15.3601C10.9695 15.5001 10.7795 15.5801 10.5795 15.5801Z">
+                          </path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p>
+                      <span style="--i:5">S</span>
+                      <span style="--i:6">e</span>
+                      <span style="--i:7">n</span>
+                      <span style="--i:8">t</span>
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <p class="result-text" id="result"></p>
+            </form>
+          </div>
+        </div>
+        <div class="links-container" data-aos="fade-right" data-aos-duration="400" data-aos-once="true">
+          <div class="ai-section">
+            <h3 class="ai-heading">Let's chat with my AI!</h3>
+            <div class="ai-buttons">
+              <a href="https://wa.me/your-whatsapp-ai-link" target="_blank" class="pro-button">
+                <span class="button-text">
+                  WhatsApp AI
+                  <svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <g fill="none">
+                      <path
+                        d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z">
+                      </path>
+                      <path
+                        d="M9.107 5.448c.598-1.75 3.016-1.803 3.725-.159l.06.16l.807 2.36a4 4 0 0 0 2.276 2.411l.217.081l2.36.806c1.75.598 1.803 3.016.16 3.725l-.16.06l-2.36.807a4 4 0 0 0-2.412 2.276l-.081.216l-.806 2.361c-.598 1.75-3.016 1.803-3.724.160l-.062-.160l-.806-2.36a4 4 0 0 0-2.276-2.412l-.216-.081l-2.36-.806c-1.751-.598-1.804-3.016-.160-3.724l.160-.062l2.36-.806A4 4 0 0 0 8.22 8.025l.081-.216zM11 6.094l-.806 2.36a6 6 0 0 1-3.49 3.649l-.25.091l-2.36.806l2.36.806a6 6 0 0 1 3.649 3.49l.091.25l.806 2.36l.806-2.36a6 6 0 0 1 3.49-3.649l.25-.090l2.36-.807l-2.36-.806a6 6 0 0 1-3.649-3.49l-.090-.25zM19 2a1 1 0 0 1 .898.56l.048.117l.350 1.026l1.027.35a1 1 0 0 1 .118 1.845l-.118.048l-1.026.35l-.350 1.027a1 1 0 0 1-1.845.117l-.048-.117l-.350-1.026l-1.027-.35a1 1 0 0 1-.118-1.845l.118-.048l1.026-.35l.350-1.027A1 1 0 0 1 19 2"
+                        fill="currentColor"></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://instagram.com/your-instagram-ai-link" target="_blank" class="pro-button">
+                <span class="button-text">
+                  Instagram AI
+                  <svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <g fill="none">
+                      <path
+                        d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.10z">
+                      </path>
+                      <path
+                        d="M9.107 5.448c.598-1.75 3.016-1.803 3.725-.159l.06.16l.807 2.36a4 4 0 0 0 2.276 2.411l.217.081l2.36.806c1.75.598 1.803 3.016.16 3.725l-.16.06l-2.36.807a4 4 0 0 0-2.412 2.276l-.081.216l-.806 2.361c-.598 1.75-3.016 1.803-3.724.160l-.062-.160l-.806-2.36a4 4 0 0 0-2.276-2.412l-.216-.081l-2.36-.806c-1.751-.598-1.804-3.016-.160-3.724l.160-.062l2.36-.806A4 4 0 0 0 8.22 8.025l.081-.216zM11 6.094l-.806 2.36a6 6 0 0 1-3.49 3.649l-.25.091l-2.36.806l2.36.806a6 6 0 0 1 3.649 3.49l.091.25l.806 2.36l.806-2.36a6 6 0 0 1 3.49-3.649l.25-.090l2.36-.807l-2.36-.806a6 6 0 0 1-3.649-3.49l-.090-.25zM19 2a1 1 0 0 1 .898.56l.048.117l.350 1.026l1.027.35a1 1 0 0 1 .118 1.845l-.118.048l-1.026.35l-.350 1.027a1 1 0 0 1-1.845.117l-.048-.117l-.350-1.026l-1.027-.35a1 1 0 0 1-.118-1.845l.118-.048l1.026-.35l.350-1.027A1 1 0 0 1 19 2"
+                        fill="currentColor"></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-details">
+            <a href="mailto:thetirthc@gmail.com" class="contact-link">
+              <span class="link-icon">
+                <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75 5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2 1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"
+                    fill="currentColor"></path>
+                </svg>
+              </span>
+              <span class="link-text">thetirthc@gmail.com</span>
+            </a>
+            <a href="tel:+919408399252" class="contact-link">
+              <span class="link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2A19.91 19.91 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.83.37 1.63.73 2.38a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.88 6.88l1.27-1.27a2 2 0 0 1 2.11-.45c.75.36 1.55.61 2.38.73A2 2 0 0 1 22 16.92z" />
+                </svg>
+
+              </span>
+              <span class="link-text">+919408399252</span>
+            </a>
+            <div class="contact-link">
+              <span class="link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+
+              </span>
+              <span class="link-text">Rajkot, Gujarat – 360005, India</span>
+            </div>
+          </div>
+
+
+          <!-- ------------------------------- -->
+          <div class="social-login-icons">
+            <div class="socialcontainer">
+              <a href="https://x.com/tirth_chauhan21" target="_blank" class="icon social-icon-1-1">
+                <svg viewBox="0 0 512 512" height="1.7em" xmlns="http://www.w3.org/2000/svg" class="svgIcontwit"
+                  fill="white">
+                  <path
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-1">
+                <svg viewBox="0 0 512 512" height="1.7em" xmlns="http://www.w3.org/2000/svg" class="svgIcontwit"
+                  fill="white">
+                  <path
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="socialcontainer">
+              <a href="https://instagram.com/tirth_chauhan_21" target="_blank" class="icon social-icon-2-2">
+                <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-2">
+                <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="socialcontainer">
+              <a href="https://www.facebook.com/share/1Bgm6RnYQf/" target="_blank" class="icon social-icon-3-3">
+                <svg viewBox="0 0 384 512" fill="white" height="1.6em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-3">
+                <svg viewBox="0 0 384 512" fill="white" height="1.6em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="socialcontainer">
+              <a href="https://github.com/thetirthchauhan" target="_blank" class="icon social-icon-4-4">
+                <svg fill="white" viewBox="0 0 496 512" height="1.6em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-4">
+                <svg fill="white" viewBox="0 0 496 512" height="1.6em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                  </path>
+                </svg>  
+              </div>
+            </div>
+            <div class="socialcontainer">
+              <a href="https://wa.me/+919408399252" target="_blank" class="icon social-icon-4-4">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32">
+                  <path
+                    d="M24.5,7.5C22.2,5.2,19.2,4,16,4C9.5,4,4.1,9.4,4.1,15.9c0,2.1,0.5,4.2,1.6,6L4,28.1l6.3-1.7	c1.7,1,3.7,1.5,5.7,1.5h0l0,0c6.6,0,11.9-5.4,12-11.9C28,12.8,26.8,9.8,24.5,7.5z M16,25.9L16,25.9c-1.8,0-3.5-0.5-5.1-1.4l-0.4-0.2	l-3.8,1l1-3.7l-0.2-0.4c-1-1.6-1.5-3.4-1.5-5.3c0-5.5,4.5-9.9,9.9-9.9c2.7,0,5.1,1,7,2.9s2.9,4.4,2.9,7C26,21.4,21.5,25.9,16,25.9z M21.5,18.4c-0.3-0.1-1.8-0.9-2-1c-0.3-0.1-0.5-0.1-0.7,0.1c-0.2,0.3-0.8,1-0.9,1.2s-0.3,0.2-0.6,0.1s-1.3-0.5-2.4-1.5	c-0.9-0.8-1.5-1.8-1.7-2.1s0-0.5,0.1-0.6c0.1-0.1,0.3-0.3,0.4-0.5s0.2-0.3,0.3-0.5s0.1-0.4,0-0.5s-0.7-1.6-0.9-2.2	c-0.2-0.6-0.5-0.5-0.7-0.5c-0.2,0-0.4,0-0.6,0c-0.2,0-0.5,0.1-0.8,0.4s-1,1-1,2.5s1.1,2.9,1.2,3.1s2.1,3.2,5.1,4.5	c0.7,0.3,1.3,0.5,1.7,0.6c0.7,0.2,1.4,0.2,1.9,0.1c0.6-0.1,1.8-0.7,2-1.4c0.2-0.7,0.2-1.3,0.2-1.4C22,18.7,21.8,18.6,21.5,18.4z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-5">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#fff"
+                    d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+                  </path>
+                  <path fill="#fff"
+                    d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+                  </path>
+                  <path fill="#cfd8dc"
+                    d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+                  </path>
+                  <path fill="#40c351"
+                    d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+                  </path>
+                  <path fill="#fff" fill-rule="evenodd"
+                    d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="socialcontainer">
+              <a href="https://linkedin.com/in/thetirthchauhan" target="_blank" class="icon social-icon-6-6">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32">
+                  <path
+                    d="M 16 4 C 13.082495 4 10.165259 4.3463233 7.2539062 5.0371094 C 6.1553894 5.2973641 5.2975503 6.1561175 5.0371094 7.2539062 C 3.6555596 13.078569 3.6554183 18.927109 5.0390625 24.751953 C 5.2984842 25.847289 6.154664 26.703469 7.25 26.962891 C 13.075758 28.345482 18.926195 28.345482 24.751953 26.962891 A 1.0001 1.0001 0 0 0 24.753906 26.960938 C 25.847488 26.700055 26.700242 25.846264 26.960938 24.751953 A 1.0001 1.0001 0 0 0 26.962891 24.75 C 28.345481 18.925272 28.344434 13.078543 26.962891 7.2539062 C 26.702356 6.1562115 25.843883 5.2975503 24.746094 5.0371094 C 21.834741 4.3463233 18.917505 4 16 4 z M 16 5.9980469 C 18.759495 5.9980469 21.519509 6.3262079 24.285156 6.9824219 C 24.637367 7.0659809 24.934019 7.3626325 25.017578 7.7148438 C 26.330034 13.248207 26.329081 18.755792 25.015625 24.289062 C 24.932315 24.638752 24.637481 24.932507 24.289062 25.015625 C 18.75547 26.328576 13.244537 26.328881 7.7109375 25.015625 C 7.3623205 24.933047 7.0669533 24.63968 6.984375 24.291016 A 1.0001 1.0001 0 0 0 6.984375 24.289062 C 5.6700192 18.755954 5.6699716 13.248181 6.9824219 7.7148438 C 7.0659809 7.3626326 7.3613606 7.0661672 7.7148438 6.9824219 A 1.0001 1.0001 0 0 0 7.7167969 6.9824219 C 10.482447 6.3262079 13.240505 5.9980469 16 5.9980469 z M 10.5 10 A 1.5 1.5 0 0 0 10.5 13 A 1.5 1.5 0 0 0 10.5 10 z M 10.5 14 C 10.174 14 9.8474844 14.084859 9.5214844 14.255859 C 9.3804844 14.329859 9.2866719 14.474813 9.2636719 14.632812 C 8.9126719 17.070813 8.9126719 19.929188 9.2636719 22.367188 C 9.2866719 22.525187 9.3804844 22.670141 9.5214844 22.744141 C 10.173484 23.086141 10.826516 23.086141 11.478516 22.744141 C 11.619516 22.670141 11.713328 22.525188 11.736328 22.367188 C 12.087328 19.929187 12.087328 17.070813 11.736328 14.632812 C 11.713328 14.474812 11.619516 14.329859 11.478516 14.255859 C 11.152516 14.084859 10.826 14 10.5 14 z M 15.232422 14.019531 C 15.013797 14.046469 14.781172 14.104031 14.544922 14.207031 C 14.389922 14.274031 14.285719 14.424797 14.261719 14.591797 C 13.912719 17.025797 13.913672 19.935187 14.263672 22.367188 C 14.286672 22.525188 14.380484 22.670141 14.521484 22.744141 C 15.148484 23.072141 16.026344 23.08425 16.652344 22.78125 C 16.837344 22.69225 16.928344 22.472531 16.902344 22.269531 C 16.407344 18.415531 16.880781 17.266625 18.175781 16.890625 C 19.301781 16.562625 20.982234 17.259812 20.115234 22.257812 C 20.079234 22.468812 20.168328 22.697062 20.361328 22.789062 C 20.987328 23.086063 21.862281 23.069281 22.488281 22.738281 C 22.622281 22.667281 22.720141 22.523047 22.744141 22.373047 C 24.321141 12.587047 17.934531 13.272547 16.644531 15.185547 C 16.661531 14.912547 16.639391 14.391672 16.525391 14.263672 C 16.415141 14.139172 15.888297 13.938719 15.232422 14.019531 z">
+                  </path>
+                </svg>
+              </a>
+              <div class="social-icon-6">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#0078d4"
+                    d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z">
+                  </path>
+                  <path
+                    d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z"
+                    opacity=".05"></path>
+                  <path
+                    d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z"
+                    opacity=".07"></path>
+                  <path fill="#fff"
+                    d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z">
+                  </path>
+                </svg>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© 2025 Tirth Chauhan. All Rights Reserved.</p>
+      <div class="footer-bottom">
+        <p class="footer-text">
+          This website is Visioned By
+          <a href="index.html" class="footer-link">Tirth Chauhan</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

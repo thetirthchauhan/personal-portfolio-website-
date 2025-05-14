@@ -1,0 +1,3169 @@
+/* Universal styles - Resets default margins, padding, and sets global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styles - Sets background color, text color, and hides horizontal overflow */
+body {
+  background: #0f172a;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* Navbar styles - Fixed navigation bar with flex layout */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 2000;
+  transition: background 0.3s ease;
+}
+
+/* Navbar scrolled state - Changes background when scrolled */
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+/* Logo styles - Styles for the logo text */
+.logo {
+  color: #f1f5f9;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav links container - Flex container for navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+/* Nav links list item - Spacing for each navigation link */
+.nav-links li {
+  margin: 0 20px;
+}
+
+/* Nav links anchor - Styles for navigation link text */
+.nav-links a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Nav links anchor pseudo-element - Underline effect for links */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #22d3ee;
+  transition: width 0.3s ease;
+}
+
+/* Nav links anchor hover pseudo-element - Underline animation on hover */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Nav links anchor hover - Hover effect for navigation links */
+.nav-links a:hover {
+  color: #22d3ee;
+  transform: scale(1.05);
+}
+
+/* Nav links anchor active state - Styles for active navigation link */
+.nav-links a.active {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+/* Nav links anchor active pseudo-element - Underline for active link */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Hamburger icon - Hidden by default, shown on smaller screens */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #f1f5f9;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Hero section - Full-screen hero with flex centering */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero pseudo-element - Radial gradient overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center,
+      rgba(23, 48, 172, 0.1) 0%,  
+      transparent 70%);
+  z-index: 1;
+}
+
+/* Particles container - Container for floating particles */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Particle element - Individual floating particle with animation */
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: float 25s infinite linear;
+}
+
+/* Float animation - Animation for floating particles */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+/* Hero content container - Flex container for hero text and image */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero text container - Container for hero text content */
+.hero-text {
+  flex: 10;
+}
+
+/* Hero text heading - Main heading with animation */
+.hero-text h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #f1f5f9;
+  animation: fadeInScale 1s ease forwards;
+}
+
+.hero-text .neon-glowH {
+  font-size: 30px;
+  color: #e3dfdc;
+  text-shadow: 0 0 5px black, 0 10px 10px black, 0 0 15px black;
+}
+
+/* Neon glow effect - Neon flicker animation for text */
+.hero-text .neon-glow {
+  animation: neonFlicker 2s ease-in-out forwards;
+}
+
+/* Neon flicker animation - Flickering neon glow effect */
+@keyframes neonFlicker {
+  0% {
+    text-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
+  }
+
+  50% {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.7),
+      0 0 20px rgba(34, 211, 238, 0.5);
+  }
+
+  100% {
+    text-shadow: 0 0 5px rgba(34, 211, 238, 0.5),
+      0 0 15px rgba(34, 211, 238, 0.3);
+  }
+}
+
+.hero-text .role-containerH {
+  margin-top: 15px;
+  font-size: 34px;
+  color: #94a3b8;
+}
+
+/* Role container - Container for typing role text */
+.hero-text .role-container {
+  margin-top: 15px;
+  font-size: 24px;
+  color: #94a3b8;
+}
+
+/* Typing text - Text with typing animation effect */
+.hero-text .typing-text {
+  color: #22d3ee;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Typing text fade-out - Fade-out effect for typing text */
+.hero-text .typing-text.fade-out {
+  opacity: 0;
+}
+
+/* Typing text cursor - Blinking cursor effect for typing text */
+.hero-text .typing-text::after {
+  content: "|";
+  position: absolute;
+  right: -5px;
+  color: #22d3ee;
+  animation: blink 0.7s infinite;
+}
+
+/* Blink animation - Blinking effect for typing cursor */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Fade in scale animation - Fade-in and scale animation for text */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hero image container - Container for hero image */
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+/* Image container - Inline-block container for image */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hero image - Styles for the hero image with animations */
+.hero-image img {
+  max-width: 400px;
+  border-radius: 30%;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  animation: floatImage 4s ease-in-out infinite,
+    pulseGlow 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: radial-gradient(circle,
+      rgba(34, 211, 238, 0.2) 0%,
+      transparent 70%);
+}
+
+/* Hero image hover - Hover effect for hero image */
+.hero-image img:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.8);
+}
+
+/* Pulse glow animation - Glowing pulse effect for hero image */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  }
+}
+
+/* Float image animation - Floating animation for hero image */
+@keyframes floatImage {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* CTA buttons container - Flex container for call-to-action buttons */
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Button styles - Gradient button with hover effects */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  overflow: hidden;
+  height: 3.5rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#0f172a, #0f172a),
+    linear-gradient(137.48deg,
+      #38bdf8 10%,
+      #22d3ee 45%,
+      #8f51ea 67%,
+      #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Container stars - Background stars effect for button */
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+/* Strong text - Button text styles */
+strong {
+  z-index: 2;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: #f1f5f9;
+  text-shadow: 0 0 4px #f1f5f9;
+}
+
+/* Glow effect - Glow animation for button */
+#glow {
+  position: absolute;
+  display: flex;
+  width: 14rem;
+}
+
+/* Circle element - Animated circles for button glow */
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+/* First circle - Color for first glow circle */
+.circle:nth-of-type(1) {
+  background: rgba(56, 189, 248, 0.636);
+}
+
+/* Second circle - Color for second glow circle */
+.circle:nth-of-type(2) {
+  background: rgba(34, 211, 238, 0.704);
+}
+
+/* Button hover stars - Stars background on button hover */
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #0f172a;
+}
+
+/* Button hover - Hover effect for button */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Button active - Active state for button */
+.btn:active {
+  border: double 4px #22d3ee;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+/* Button active circle - Circle color change on active */
+.btn:active .circle {
+  background: #22d3ee;
+}
+
+/* Stars container - Container for animated stars */
+#stars {
+  position: null;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+/* Stars pseudo-element after - Animated star pattern */
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+/* Stars after background - Radial gradient for stars */
+#stars::after {
+  background-image: radial-gradient(#f1f5f9 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+/* Stars pseudo-element before - Another animated star pattern */
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+/* Stars before background - Radial gradient for stars with opacity */
+#stars::before {
+  background-image: radial-gradient(#f1f5f9 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+/* Star animation - Vertical movement for stars */
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+/* Star rotation animation - Rotation for star pattern */
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+/* Gradient animation - Gradient background animation for button */
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pulse animation - Pulsing glow effect for button circles */
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Hero pseudo-element after - Gradient line at bottom */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+}
+
+/* Book container - 3D book animation container */
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 320px;
+  height: 290px;
+  background-color: #1e293b;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transform: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f5f9;
+}
+
+/* Content inside book - Hidden content revealed on book open */
+.content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px;
+}
+
+/* Book open state - Show content when book is open */
+.book.open .content {
+  opacity: 1;
+}
+
+/* Book cover - Cover of the book with 3D animation */
+.cover {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform-origin: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Book open cover - Rotate cover to open book */
+.book.open .cover {
+  transform: rotateY(-80deg);
+}
+
+/* Terminal header - Header for code editor-like book cover */
+.cover .terminal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343434;
+  padding: 6px;
+  border-bottom: 1px solid #ffffff3e;
+}
+
+/* Terminal controls - Window control buttons for book cover */
+.cover .terminal-controls {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  gap: 7px;
+}
+
+/* Control button - Generic style for control buttons */
+.cover .control {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+/* Close button - Red close button on book cover */
+.cover .control.close {
+  background-color: #e33;
+}
+
+/* Minimize button - Yellow minimize button on book cover */
+.cover .control.minimize {
+  background-color: #ee0;
+}
+
+/* Maximize button - Green maximize button on book cover */
+.cover .control.maximize {
+  background-color: #0b0;
+}
+
+/* Terminal title - Title text on book cover header */
+.cover .terminal-title {
+  color: #eeeeeec1;
+  font-size: 14px;
+}
+
+/* Cover text - Main text on book cover */
+.cover .cover-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f1f5f9;
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.5);
+}
+
+/* Code content - Code text inside book */
+.content code {
+  padding: 10px;
+  color: white;
+}
+
+/* Property text - Indented property text inside book */
+.content .property {
+  margin-left: 30px;
+}
+
+/* Color 0 - Blue color for code text */
+.content .color-0 {
+  color: rgb(86 156 214);
+}
+
+/* Color 1 - Green color for code text */
+.content .color-1 {
+  color: rgb(182 206 168);
+}
+
+/* Color 2 - Light blue color for code text */
+.content .color-2 {
+  color: rgb(156 220 254);
+}
+
+/* Color 3 - Orange color for code text */
+.content .color-3 {
+  color: rgb(207 146 120);
+}
+
+/* Generic button - Reusable button with glow effect */
+.button {
+  --white: #f1f5f9;
+  --bg: transparent;
+  --radius: 100px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  position: relative;
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  transition: all 0.2s ease;
+  box-shadow: inset 0 0.3rem 0.9rem rgba(34, 211, 238, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(34, 211, 238, 0.5),
+    0 3rem 3rem rgba(0, 0, 0, 0.3), 0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(241, 245, 249, 0.7);
+}
+
+/* Button hover - Hover effect for button */
+.button:hover {
+  box-shadow: inset 0 0.3rem 0.5rem rgba(34, 211, 238, 0.4),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(34, 211, 238, 0.7),
+    0 3rem 3rem rgba(0, 0, 0, 0.3), 0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+
+/* Button active - Active state for button */
+.button:active {
+  transform: translateY(4px);
+  box-shadow: inset 0 0.3rem 0.5rem rgba(34, 211, 238, 0.5),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.8),
+    inset 0 -0.4rem 0.9rem rgba(34, 211, 238, 0.4),
+    0 3rem 3rem rgba(0, 0, 0, 0.3), 0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+
+/* Button pseudo-elements - Gradient lines on button sides */
+.button::before,
+/* Button pseudo-elements - Gradient lines on button sides */
+.button::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70%;
+  background: linear-gradient(to bottom, #22d3ee, transparent);
+  transform: translateY(-50%);
+}
+
+/* Button before - Left gradient line */
+.button::before {
+  left: -10px;
+  top: 50%;
+}
+
+/* Button after - Right gradient line */
+.button::after {
+  right: -10px;
+  top: 50%;
+}
+
+/* Vertical label wrapper - Container for vertical button */
+.vertical-label-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding-top: 55px;
+  padding-right: 50px;
+}
+
+/* Vertical button - Rotated button for vertical text */
+.vertical-label-wrapper .button {
+  writing-mode: vertical-rl;
+  transform: rotate(0deg);
+  padding: 15px 30px;
+}
+
+/* Package container - Outer container for skill card */
+.package {
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(163deg, #38bdf8 0%, #22d3ee 100%);
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+/* Package hover - Hover effect for skill card */
+.package:hover {
+  box-shadow: 0px 0px 20px 1px rgba(34, 211, 238, 0.3);
+}
+
+/* Inner package - Inner container for skill card */
+.package2 {
+  width: 120px;
+  height: 120px;
+  background-color: #1e293b;
+  border-radius: 12px;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner package hover - Hover effect for inner skill card */
+.package2:hover {
+  transform: scale(0.98);
+  border-radius: 14px;
+}
+
+/* Skill image - Image inside skill card */
+.skill-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Skill image hover - Hover effect for skill image */
+.package2:hover .skill-image {
+  transform: scale(1.15);
+}
+
+/* Skill text - Text inside skill card */
+.text {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Media Query for max-width 768px - Responsive styles for all sections */
+@media (max-width: 768px) {
+
+  /* Navbar responsive - Adjust padding for smaller screens */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  /* Nav links responsive - Convert to vertical menu on mobile */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Nav links active state - Show menu on mobile */
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Nav links list item - Adjust spacing for mobile */
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  /* Nav links anchor - Larger font for mobile */
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  /* Hamburger icon - Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hero content responsive - Stack content vertically */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Hero text - Adjust margin for mobile */
+  .hero-text {
+    margin-bottom: 20px;
+  }
+
+  /* Hero heading - Smaller font for mobile */
+  .hero-text h2 {
+    font-size: 40px;
+  }
+
+  .hero-text .role-containerH {
+    font-size: 28px;
+  }
+
+  /* Role container - Smaller font for mobile */
+  .hero-text .role-container {
+    font-size: 18px;
+  }
+
+  /* Hero image - Center image on mobile */
+  .hero-image {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Hero image responsive - Smaller image with pop-up animation */
+  .hero-image img {
+    max-width: 250px;
+    border-radius: 30%;
+    animation: popUp 1s ease forwards;
+  }
+
+  /* Pop-up animation - Animation for image on mobile */
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* CTA buttons responsive - Stack buttons vertically */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Button responsive - Smaller button size */
+  .btn {
+    width: 12rem;
+    height: 3rem;
+  }
+
+  /* Glow responsive - Adjust glow width */
+  #glow {
+    width: 11rem;
+  }
+
+  /* Strong text responsive - Smaller font for button text */
+  strong {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  /* Package responsive - Smaller skill card */
+  .package {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Inner package responsive - Smaller inner skill card */
+  .package2 {
+    width: 90px;
+    height: 90px;
+    padding: 8px;
+  }
+
+  /* Skill image responsive - Smaller skill image */
+  .skill-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Skill text responsive - Smaller text */
+  .text {
+    font-size: 12px;
+  }
+}
+
+/* About section - Main container for about section */
+.about-section {
+  height: auto;
+  background: #0f172a;
+  padding: 60px 5vw;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* About content - Flex container for about text and code editor */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  gap: 30px;
+}
+
+/* About text wrapper - Container for about text */
+.about-text-wrapper {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+/* About text - Text content for about section */
+.about-text {
+  width: 100%;
+}
+
+/* About heading - Heading for about section */
+.about-text h2 {
+  color: #22d3ee;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* About paragraph - Paragraph text for about section */
+.about-text p {
+  color: #cbd5e1;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* Code editor wrapper - Container for code editor book */
+.code-editor-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Skills section - Main container for skills section */
+.skills-section {
+  padding: 40px 5vw;
+  text-align: center;
+  position: relative;
+}
+
+/* Skills heading box - Container for skills heading */
+.skills-heading-box {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Skills scroll container - Container for scrolling skills */
+.skills-scroll {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Skills scroll content - Flex container for scrolling skill cards */
+.skills-scroll-content {
+  display: flex;
+  gap: 30px;
+  animation: infiniteScroll 19s linear infinite;
+  width: max-content;
+}
+
+/* Skills scroll hover - Pause animation on hover */
+.skills-scroll:hover .skills-scroll-content {
+  animation-play-state: paused;
+  cursor: grab;
+}
+
+/* Infinite scroll animation - Continuous scrolling animation */
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Skills section divider - Gradient line at bottom */
+.skills-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+  margin-top: 40px;
+}
+
+/* Experience section - Main container for experience section */
+.experience-section {
+  padding: 20px 3vw;
+  background: radial-gradient(circle at top left,
+      rgba(245, 128, 188, 0.1) 0%,
+      transparent 70%);
+  /* background: #0f172a; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Experience section overlay - Radial gradient background */
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom left,
+      rgba(139, 92, 246, 0.1) 0%,
+      transparent 70%);
+  z-index: 1;
+}
+
+/* Experience heading box - Container for experience heading */
+.experience-heading-box {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* Experience content - Flex container for experience content */
+.experience-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Book animation container - Container for book animation */
+.book-animation {
+  flex: 0 0 15%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Loader container - Container for book loader animation */
+.loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --book-color: #f1775b;
+  --book-cover-color: #506c86;
+}
+
+/* Loader book - Book animation for loader */
+.loader .book {
+  width: 150px;
+  height: 13px;
+  background-color: var(--book-color);
+  border-bottom: 2px solid var(--book-cover-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0 0 10px rgba(241, 119, 91, 0.5);
+}
+
+/* Loader page - First page animation for loader */
+.loader .page {
+  width: 50%;
+  height: 2px;
+  background-color: var(--book-color);
+  animation: paging 0.7s ease-out infinite;
+  transform-origin: left;
+}
+
+/* Loader page 2 - Second page animation for loader */
+.loader .page2 {
+  width: 50%;
+  height: 2px;
+  background-color: var(--book-color);
+  animation: paging 0.8s ease-out infinite;
+  transform-origin: left;
+  position: absolute;
+}
+
+/* Paging animation - Page flipping animation */
+@keyframes paging {
+  10% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-180deg);
+  }
+}
+
+/* Experience text - Container for experience text */
+.experience-text {
+  flex: 1;
+  text-align: left;
+  padding-right: 1;
+}
+
+/* Experience heading - Main heading for experience */
+.experience-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 20px;
+}
+
+/* Highlight text - Large highlighted text */
+.experience-text .highlight {
+  font-size: 100px;
+  color: #22d3ee;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.7);
+}
+
+/* Experience paragraph - Paragraph text for experience */
+.experience-text p {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Experience list - List of experience items */
+.experience-list {
+  list-style: none;
+  text-align: left;
+  margin: 0 0 30px;
+}
+
+/* Experience list item - Individual experience item */
+.experience-list li {
+  color: #f1f5f9;
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Experience list item marker - Checkmark before list item */
+.experience-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #22d3ee;
+  font-size: 20px;
+}
+
+/* Experience section divider - Gradient line at bottom */
+.experience-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+  margin-top: 40px;
+}
+
+/* Projects section - Main container for projects section */
+.projects-section {
+  padding: 20px 3vw;
+  background: #0f172a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Projects section overlay - Radial gradient background */
+.projects-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right,
+      rgba(208, 33, 124, 0.1) 0%,
+      transparent 70%);
+  z-index: 1;
+}
+
+/* Projects heading box - Container for projects heading */
+.projects-heading-box {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* Projects content - Main content container for projects */
+.projects-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+/* Projects container - Flex container for project cards */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project card - Main card for project display */
+.card {
+  width: 2000px;
+  height: 550px;
+  background: rgb(223, 225, 235);
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Video description - Container for project description */
+/* .video-description {
+  width: 60%;
+  height: 100%;
+  background: transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 500;
+} */
+
+/* -------------------------------------------- */
+
+/* Video description - Container for project description with professional look */
+.video-description {
+  width: 70%;
+  height: 100%;
+  /* background: #ffffff;
+  border-radius: 12px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #1f2a44;
+  font-size: 1px;
+  font-weight: 400;
+  /* border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+}
+
+/* Video container - Adjusted width for balance */
+.video-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Intro text - Introductory text with professional tone */
+.intro-text {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #54565c;
+}
+
+/* Project title - Clean and bold title */
+.project-title {
+  font-size: 26px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  color: #0a0e19;
+}
+
+/* Project description - Professional description text */
+.project-desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #191d23;
+}
+
+/* Project links container - Container for buttons */
+.project-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Project button - Clean and professional button style */
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1f2a44;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+/* Project button hover - Subtle hover effect */
+.project-button:hover {
+  background: #374151;
+}
+
+/* Media Query for max-width 768px */
+@media (max-width: 768px) {
+  .video-description {
+    width: 100%;
+    height: 40%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    order: 1;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 60%;
+    order: 2;
+  }
+
+  .intro-text {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .project-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .project-links {
+    gap: 10px;
+  }
+
+  .project-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ------------------------------------------------- */
+
+/* Video container - Container for project video and menu */
+.video-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Video box - Container for project video */
+.video-box {
+  width: 100%;
+  height: 70%;
+  background: transparent;
+  border-radius: 20px;
+  border: none;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Project video - Video element inside video box */
+.video-box .project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Video box hover - Hover effect for video box */
+.video-box:hover {
+  transform: scale(1.02);
+}
+
+/* Video menu - Menu container below video */
+.video-menu {
+  width: 100%;
+  height: 30%;
+  background: transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Card container - Flex container for smaller cards */
+.container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Small card - Individual small card inside container */
+.container .card {
+  background-color: #fff;
+  height: 100px;
+  width: 120px;
+  flex: 1;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Active card - Styles for the split card (default or on hover/click) */
+.container .card.active-card {
+  flex: 2;
+  background-color: #b8b8b8;
+}
+
+/* Projects section divider - Gradient line at bottom */
+.projects-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+  margin-top: 40px;
+}
+
+/* Education section - Main container for education section */
+.education-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0f172a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Education section overlay - Radial gradient background */
+.education-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.06) 0%, transparent 50%),
+    linear-gradient(160deg, rgba(30, 41, 59, 0.3), rgba(15, 23, 42, 0.3));
+  z-index: 0;
+  pointer-events: none;
+  animation: moveBackground 10s ease-in-out infinite;
+
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 50% 30%, 80% 70%;
+  }
+
+  50% {
+    background-position: 55% 35%, 75% 65%;
+  }
+
+  100% {
+    background-position: 50% 30%, 80% 70%;
+  }
+}
+
+/* Education heading box - Container for education heading */
+.education-heading-box {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* Education cards - Container for education cards */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Edu row - Row container for education cards */
+.edu-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Edu row first child - Spacing for first row */
+.edu-row:first-child {
+  padding-bottom: 30px;
+}
+
+/* Edu card - Individual education card */
+.edu-card {
+  --background: linear-gradient(to right, #22d3ee 0%, #f472b6 100%);
+  width: 300px;
+  height: 200px;
+  padding: 0.9px;
+  border-radius: 0.7rem;
+  overflow: visible;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+/* Edu card pseudo-element - Blur effect behind card */
+.edu-card::after {
+  position: absolute;
+  content: "";
+  top: -22px;
+  left: 0px;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.76);
+  filter: blur(34.5px);
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+/* Edu loader - Loader animation on top of card */
+.edu-loader {
+  position: absolute;
+  top: -22.4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44.8px;
+  height: 44.8px;
+  color: #22d3ee;
+  background: radial-gradient(11.2px, currentColor 94%, #0000);
+}
+
+/* Edu loader pseudo-element - Animated loader dots */
+.edu-loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor) top left,
+    radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: edu-loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+/* Edu loader animation - Animation for loader dots */
+@keyframes edu-loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+/* Card info - Content inside education card */
+.card-info {
+  --color: #1e293b;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+  padding: 20px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Card info title - Title text inside card */
+.card-info .title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #22d3ee;
+  font-size: 21px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Card info description - Description text inside card */
+.card-info .description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+/* Edu card hover pseudo-element - Blur effect on hover */
+.edu-card:hover::after {
+  opacity: 0.6;
+  padding: 0.7rem 0;
+  top: 18px;
+  transition: 0.6s;
+}
+
+/* Edu card hover card info - Text color change on hover */
+.edu-card:hover .card-info {
+  color: #f1f5f9;
+  transition: color 1s;
+}
+
+/* Edu card hover card info title - Title color change on hover */
+.edu-card:hover .card-info .title {
+  color: #f472b6;
+}
+
+/* Education section divider - Gradient line at bottom */
+.education-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+  margin-top: 40px;
+}
+
+/* Media Query for max-width 768px - Responsive styles for additional sections */
+@media (max-width: 768px) {
+
+  /* About section responsive - Adjust padding for mobile */
+  .about-section {
+    padding: 50px 20px;
+    padding-bottom: 20px;
+  }
+
+  /* About content responsive - Stack content vertically */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* About text wrapper responsive - Full width and centered */
+  .about-text-wrapper {
+    max-width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    order: 2;
+    padding: 10px;
+  }
+
+  /* Code editor wrapper responsive - Center code editor */
+  .code-editor-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    order: 1;
+    padding: 10px;
+  }
+
+  /* Vertical label wrapper responsive - Hide vertical label */
+  .vertical-label-wrapper {
+    display: none;
+  }
+
+  /* Skills scroll content responsive - Adjust gap and animation */
+  .skills-scroll-content {
+    gap: 20px;
+    animation: infiniteScrollMobile 20s linear infinite;
+  }
+
+  /* Infinite scroll mobile animation - Adjusted scrolling for mobile */
+  @keyframes infiniteScrollMobile {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Experience section responsive - Adjust padding for mobile */
+  .experience-section {
+    padding: 10px 10px;
+  }
+
+  /* Experience content responsive - Stack content vertically */
+  .experience-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Book animation responsive - Full width for book animation */
+  .book-animation {
+    flex: 0 0 100%;
+  }
+
+  /* Loader book responsive - Smaller book size for mobile */
+  .loader .book {
+    margin-top: 50px;
+    width: 120px;
+    height: 10px;
+  }
+
+  /* Experience text responsive - Center text on mobile */
+  .experience-text {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  /* Experience heading responsive - Smaller font for mobile */
+  .experience-text h2 {
+    font-size: 28px;
+  }
+
+  /* Highlight text responsive - Smaller font for mobile */
+  .experience-text .highlight {
+    font-size: 80px;
+  }
+
+  /* Experience paragraph responsive - Smaller font for mobile */
+  .experience-text p {
+    font-size: 14px;
+  }
+
+  /* Experience list responsive - Center list on mobile */
+  .experience-list {
+    margin: 0 auto 30px;
+    max-width: 300px;
+  }
+
+  /* Experience list item responsive - Smaller font for mobile */
+  .experience-list li {
+    font-size: 14px;
+  }
+
+  /* Projects section responsive - Adjust padding for mobile */
+  .projects-section {
+    padding: 10px 10px;
+  }
+
+  /* Projects content responsive - Smaller font for mobile */
+  .projects-content {
+    font-size: 14px;
+  }
+
+  /* Projects container responsive - Adjust padding for mobile */
+  .projects-container {
+    padding: 10px;
+  }
+
+  /* Project card responsive - Smaller card size and vertical layout */
+  .card {
+    width: 90%;
+    max-width: 350px;
+    height: 700px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  /* Video container responsive - Full width for mobile */
+  .video-container {
+    width: 100%;
+    height: 60%;
+    order: 2;
+  }
+
+  /* Video box responsive - Adjust height for mobile */
+  .video-box {
+    width: 100%;
+    height: 66.67%;
+    border-radius: 15px;
+  }
+
+  /* Video description responsive - Full width and smaller font */
+  .video-description {
+    width: 100%;
+    height: 40%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    order: 1;
+  }
+
+  /* Video menu responsive - Adjust height and font for mobile */
+  .video-menu {
+    width: 100%;
+    height: 33.33%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 20px;
+    order: 3;
+  }
+
+  /* Education section responsive - Adjust padding for mobile */
+  .education-section {
+    padding: 40px 10px;
+  }
+
+  /* Education heading box responsive - Adjust margin for mobile */
+  .education-heading-box {
+    margin-bottom: 50px;
+  }
+
+  /* Education cards responsive - Full width for mobile */
+  .education-cards {
+    max-width: 100%;
+  }
+
+  /* Edu row responsive - Stack cards vertically */
+  .edu-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Edu row first child responsive - Adjust padding for mobile */
+  .edu-row:first-child {
+    padding-bottom: 20px;
+  }
+
+  /* Edu card responsive - Smaller card size for mobile */
+  .edu-card {
+    width: 320px;
+    height: 170px;
+  }
+
+  /* Edu loader responsive - Smaller loader size for mobile */
+  .edu-loader {
+    top: -17.6px;
+    width: 35.2px;
+    height: 35.2px;
+    background: radial-gradient(8.8px, currentColor 94%, #0000);
+  }
+
+  /* Edu loader pseudo-element responsive - Adjust loader dots size */
+  .edu-loader:before {
+    background-size: 17.6px 17.6px;
+  }
+
+  /* Edu loader animation responsive - Adjust animation for mobile */
+  @keyframes edu-loader {
+    33% {
+      inset: -8.8px;
+      transform: rotate(0deg);
+    }
+
+    66% {
+      inset: -8.8px;
+      transform: rotate(90deg);
+    }
+
+    100% {
+      inset: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  /* Card info responsive - Adjust padding for mobile */
+  .card-info {
+    padding-top: 20px;
+  }
+
+  /* Card info title responsive - Smaller font for mobile */
+  .card-info .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* Card info description responsive - Smaller font for mobile */
+  .card-info .description {
+    font-size: 14px;
+  }
+}
+
+
+/* ***************************************** */
+
+/* Contact section - Main container for contact section */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0f172a;
+  position: relative;
+}
+
+/* Contact heading box - Container for contact heading */
+.contact-heading-box {
+  margin-bottom: 30px;
+}
+
+/* Contact content - Flex container for contact form */
+.contact-content {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Quantum grid container - Main container for contact form */
+.quantum-grid-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 20px;
+  border: 2px solid rgba(244, 114, 182, 0.5);
+  position: relative;
+}
+
+/* Energy lines - Container for animated lines in form */
+.energy-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Line - Individual animated line */
+.line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  height: 1px;
+  width: 80%;
+  left: 10%;
+  opacity: 0;
+  animation: energyFlow 4s infinite ease-in-out;
+}
+
+/* Line 1 - First animated line with delay */
+.line-1 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+/* Line 2 - Second animated line with delay */
+.line-2 {
+  top: 40%;
+  animation-delay: 1s;
+}
+
+/* Line 3 - Third animated line with delay */
+.line-3 {
+  top: 60%;
+  animation-delay: 2s;
+}
+
+/* Line 4 - Fourth animated line with delay */
+.line-4 {
+  top: 80%;
+  animation-delay: 3s;
+}
+
+/* Energy flow animation - Animation for energy lines */
+@keyframes energyFlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Quantum form - Flex container for form elements */
+.quantum-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Quantum node - Container for form input/label */
+.quantum-node {
+  position: relative;
+}
+
+/* Quantum label - Floating label for form inputs */
+.quantum-label {
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+  transform: translateY(-50%);
+  color: #f1f5f9;
+  background: #0f172a;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+
+/* Quantum label visibility - Show label on focus or when input is filled */
+.node-core:focus-within .quantum-label,
+.node-core input:not(:placeholder-shown)+.quantum-label,
+.node-core textarea:not(:placeholder-shown)+.quantum-label {
+  top: -0.8rem;
+  left: 0.5rem;
+  opacity: 1;
+}
+
+/* Node core - Container for form input */
+.node-core {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Node core focus - Border color change on focus */
+.node-core:focus-within {
+  border: 2px solid #f472b6;
+}
+
+/* Quantum form input - Styles for form input */
+.quantum-form input,
+/* Quantum form textarea - Styles for form textarea */
+.quantum-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  padding: 0.9rem 1rem;
+  resize: none;
+}
+
+/* Quantum form input placeholder - Placeholder styles for input */
+.quantum-form input::placeholder,
+/* Quantum form textarea placeholder - Placeholder styles for textarea */
+.quantum-form textarea::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+/* Quantum form textarea - Height for textarea */
+.quantum-form textarea {
+  height: 5rem;
+}
+
+
+/* ------------------------------------------------ */
+
+
+/* Quantum core wrapper - Container for submit button */
+.form-container .quantum-core-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Quantum core - Submit button container */
+.form-container .quantum-core {
+  --gradient-start: #22d3ee;
+  --gradient-end: #f472b6;
+  --neutral-1: #f7f8f7;
+  --neutral-2: #e7e7e7;
+  --radius: 10px;
+
+  cursor: pointer;
+  border-radius: var(--radius);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border: none;
+  box-shadow: 0 0.5px 0.5px 1px rgba(255, 255, 255, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 5px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  padding: 15px;
+  height: 50px;
+  font-family: "Galano Grotesque", Poppins, Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-container .quantum-core:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
+    0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 3px -3px rgba(0, 0, 0, 0.04);
+}
+
+.form-container .quantum-core:active {
+  transform: scale(1);
+  box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
+    0 10px 3px -3px rgba(0, 0, 0, 0.2);
+}
+
+.form-container .quantum-core:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: radial-gradient(circle, var(--gradient-start) 20%, var(--gradient-end) 80%) padding-box,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45)) border-box;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.form-container .quantum-core:hover::after {
+  transform: scale(1.05, 1.1);
+  box-shadow: inset 0 -1px 3px 0 rgba(255, 255, 255, 1);
+}
+
+.form-container .quantum-core::before {
+  content: "";
+  inset: 5px 4px 4px 4px;
+  position: absolute;
+  background: radial-gradient(circle, var(--gradient-start) 20%, var(--gradient-end) 80%);
+  border-radius: 20px;
+  filter: blur(0.5px);
+  z-index: 2;
+}
+
+.form-container .quantum-core .core-state p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container .quantum-core .core-state .core-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container .quantum-core .core-state .core-icon svg {
+  overflow: visible;
+}
+
+/* Core outline */
+.form-container .quantum-core .core-outline {
+  position: absolute;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  inset: -2px -3.5px;
+}
+
+.form-container .quantum-core .core-outline::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 180deg,
+    transparent 60%,
+    white 80%,
+    transparent 100%
+  );
+  animation: spin 2s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form-container .quantum-core:hover .core-outline {
+  opacity: 1;
+}
+
+.form-container .quantum-core:hover .core-outline::before {
+  animation-play-state: running;
+}
+
+/* Letters */
+.form-container .quantum-core .core-state p span {
+  display: block;
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+}
+
+.form-container .quantum-core:hover .core-state p span {
+  opacity: 1;
+  animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+}
+
+/* Trigger "Sent" animation only when .sent class is added */
+.form-container .quantum-core.sent .core-state--default {
+  display: none; /* Hide "Send Message" when "Sent" is active */
+}
+
+.form-container .quantum-core.sent .core-state--default p span {
+  opacity: 1;
+  animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
+}
+
+.form-container .quantum-core.sent .core-state--default .core-icon svg {
+  animation: takeOff 0.8s linear forwards;
+}
+
+.form-container .quantum-core.sent .core-state--default .core-icon {
+  transform: rotate(0) scale(1);
+}
+
+.form-container .quantum-core.sent .core-state--default .core-icon:before {
+  animation: contrail 0.8s linear forwards;
+}
+
+.form-container .quantum-core.sent .core-state--sent {
+  display: flex;
+}
+
+.form-container .quantum-core.sent .core-state--sent span {
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
+}
+
+.form-container .quantum-core.sent .core-state--sent .core-icon svg {
+  opacity: 0;
+  animation: appear 1.2s ease forwards 0.8s;
+}
+
+@keyframes wave {
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+    color: var(--gradient-end);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(5px) rotate(-90deg);
+    color: var(--gradient-end);
+    filter: blur(5px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes disapear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(5px) translateY(20px);
+    color: var(--gradient-end);
+    filter: blur(5px);
+  }
+}
+
+/* Plane */
+.form-container .quantum-core .core-state--default .core-icon svg {
+  animation: land 0.6s ease forwards;
+}
+
+.form-container .quantum-core:hover .core-state--default .core-icon {
+  transform: rotate(45deg) scale(1);
+}
+
+@keyframes takeOff {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(70px) rotate(45deg) scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(160px) rotate(45deg) scale(0);
+  }
+}
+
+@keyframes land {
+  0% {
+    transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
+    opacity: 0;
+    filter: blur(3px);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Contrail */
+.form-container .quantum-core .core-state--default .core-icon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 0;
+  left: -5px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+
+@keyframes contrail {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  8% {
+    width: 15px;
+  }
+  60% {
+    opacity: 0.7;
+    width: 80px;
+  }
+  100% {
+    opacity: 0;
+    width: 160px;
+  }
+}
+
+/* States */
+.form-container .quantum-core .core-state {
+  padding-left: 20px;
+  z-index: 2;
+  display: flex;
+  position: relative;
+}
+
+.form-container .quantum-core .core-state--default span:nth-child(4) {
+  margin-right: 5px;
+}
+
+.form-container .quantum-core .core-state--sent {
+  display: none;
+}
+
+.form-container .quantum-core .core-state--sent svg {
+  transform: scale(1);
+  margin-right: 6px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(4) rotate(-40deg);
+    color: var(--gradient-end);
+    filter: blur(4px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(0.6);
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* --------------------------------------------------- */
+
+
+/* Contact section divider - Gradient line at bottom */
+.contact-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22d3ee, #f472b6);
+  margin-top: 40px;
+}
+
+/* ------------------------------------------------ */
+/* Contact section - Full height section with centered content */
+.contact-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Contact heading box - Centered heading with button */
+.contact-heading-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Contact content - Wrapper for the entire content */
+.contact-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact wrapper - Flex container for form and links */
+.contact-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Form container - Left side for the form on laptop */
+.form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Links container - Right side for the AI section and contact details on laptop */
+.links-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+/* AI section - Container for heading and buttons, positioned at the top */
+.ai-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+/* Contact details - Simplified container for email, phone, and location */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* AI heading - Enhanced with larger font and subtle neon effect */
+.ai-heading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #A855F7, #EC4899);
+  -webkit-background-clip: text ;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* AI buttons - Container for AI buttons in a horizontal row */
+.ai-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Contact link - Styling for email, phone, and location */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Link icon - Styling for the icons in email, phone, and location */
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Link icon SVG - Simplified styling for the SVG icons */
+.link-icon svg {
+  color: #fff;
+}
+
+/* Link text - Slightly larger font size */
+.link-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Contact link hover - Simple hover effect */
+.contact-link:hover .link-text {
+  color: #ccc;
+}
+
+/* Contact link hover - Simple icon hover */
+.contact-link:hover .link-icon svg {
+  color: #ccc;
+}
+
+/* Social media icons - From Uiverse.io by javierBarroso */
+.social-login-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  -webkit-box-reflect: below -5px linear-gradient(transparent, #0000003a);
+  margin-top: 20px;
+}
+
+.social-login-icons svg {
+  width: 40px;
+}
+
+.social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4,
+.social-icon-5,
+.social-icon-5-5,
+.social-icon-6,
+.social-icon-6-6 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 20px 0 0px 0;
+}
+
+.icon svg {
+  fill: #ffffff;
+}
+
+.socialcontainer {
+  height: 80px;
+  overflow: hidden;
+}
+
+.social-icon-1,
+.social-icon-1-1 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+}
+
+.social-icon-1 {
+  background-color: rgb(0, 0, 0);
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+.social-icon-1-1 {
+  background-color: rgba(254, 254, 254, 0);
+}
+
+.social-icon-1 svg,
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg,
+.social-icon-5 svg,
+.social-icon-6 svg {
+  opacity: 1; /* Visible by default */
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.social-icon-2 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: linear-gradient(72.44deg, #ff7a00 11.92%, #ff0169 51.56%, #d300c5 85.69%);
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+.social-icon-3 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: #316ff6;
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+.social-icon-4 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: linear-gradient(180deg, rgba(129, 34, 144, 1) 0%, rgba(77, 34, 124, 1) 91%);
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+.social-icon-5 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: #25D366; /* WhatsApp green */
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+.social-icon-6 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: #0077B5; /* LinkedIn blue */
+  transform: translateY(-70px); /* Colorful state by default */
+}
+
+/* Reverse hover effect - Revert to non-hovered state */
+.socialcontainer:hover .social-icon-1,
+.socialcontainer:hover .social-icon-2,
+.socialcontainer:hover .social-icon-3,
+.socialcontainer:hover .social-icon-4,
+.socialcontainer:hover .social-icon-5,
+.socialcontainer:hover .social-icon-6 {
+  transform: translateY(0); /* Move back to initial position on hover */
+}
+
+.socialcontainer:hover .social-icon-1 svg,
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg,
+.socialcontainer:hover .social-icon-5 svg,
+.socialcontainer:hover .social-icon-6 svg {
+  opacity: 0; /* Hide icons on hover */
+}
+
+/* Pro button - Main button styling with animated border */
+.pro-button {
+  position: relative;
+  padding: 2px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: linear-gradient(90deg, #22D3EE, #F472B6, #22D3EE);
+  background-size: 200% 100%;
+  animation: borderFlow 3s linear infinite;
+}
+
+/* Border animation keyframes */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Button text - Inner content styling */
+.button-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #1e00ff9a, #010103);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 550;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Pro button hover - Glow effect */
+.pro-button:hover {
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5), 0 0 25px rgba(244, 114, 182, 0.5);
+}
+
+/* Pro button hover - Inner background glow */
+.pro-button:hover .button-text {
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.2), rgba(244, 114, 182, 0.2));
+  color: #000000da;
+}
+
+/* Pro button active - Scale effect */
+.pro-button:active {
+  transform: scale(0.95);
+}
+
+/* Icon - Styling for the AI symbol icon */
+.icon {
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+/* Icon hover - Slight scale effect */
+.pro-button:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Media Query for max-width 768px */
+@media (max-width: 768px) {
+  /* Adjust contact section to remove top/bottom padding and ensure full height */
+  .contact-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .contact-heading-box {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-container,
+  .links-container {
+    width: 100%;
+  }
+
+  .links-container {
+    padding: 20px;
+  }
+
+  .ai-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .contact-details {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .ai-buttons {
+    width: 100%;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .button-text {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+
+  .link-text {
+    font-size: 1.1rem;
+  }
+
+  .social-login-icons {
+    gap: 10px;
+    -webkit-box-reflect: below -30px linear-gradient(transparent, #0000003a); /* Adjusted for mobile */
+  }
+
+  .social-icon-1,
+  .social-icon-1-1,
+  .social-icon-2,
+  .social-icon-2-2,
+  .social-icon-3,
+  .social-icon-3-3,
+  .social-icon-4,
+  .social-icon-4-4,
+  .social-icon-5,
+  .social-icon-5-5,
+  .social-icon-6,
+  .social-icon-6-6 {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Footer - Main footer container */
+.footer {
+  background: #0f172a;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer - Main footer container */
+.footer {
+  background: #0f172a;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer content - Container for footer text and links */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer text - Text inside footer */
+.footer-text {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Footer link - Link styles inside footer */
+.footer-link {
+  color: #22d3ee;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Footer link hover - Hover effect for footer link */
+.footer-link:hover {
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.5), 0 0 15px rgba(34, 211, 238, 0.3);
+  transform: scale(1.05);
+}
+
+/* Footer link pseudo-element - Underline effect for link */
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: #22d3ee;
+  transition: width 0.3s ease;
+}
+
+/* Footer link hover pseudo-element - Underline animation on hover */
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Footer bottom - Bottom section of footer */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Media Query for max-width 768px - Responsive styles for contact and footer */
+@media (max-width: 768px) {
+
+  /* Contact section responsive - Adjust padding for mobile */
+  .contact-section {
+    padding: 5px 5px;
+  }
+
+  /* Contact heading box responsive - Adjust margin for mobile */
+  .contact-heading-box {
+    margin-bottom: 20px;
+  }
+
+  /* Contact content responsive - Center content on mobile */
+  .contact-content {
+    justify-content: center;
+  }
+
+  /* Quantum grid container responsive - Smaller container for mobile */
+  .quantum-grid-container {
+    max-width: 370px;
+    padding: 1.5rem;
+  }
+
+  /* Quantum form input responsive - Smaller font for mobile */
+  .quantum-form input,
+  /* Quantum form textarea responsive - Smaller font for mobile */
+  .quantum-form textarea {
+    font-size: 0.8rem;
+    padding: 0.8rem 0.8rem;
+  }
+
+  /* Quantum form textarea responsive - Smaller height for mobile */
+  .quantum-form textarea {
+    height: 5rem;
+  }
+
+  /* Quantum label responsive - Adjust position and size for mobile */
+  .quantum-label {
+    font-size: 0.8rem;
+    left: -1.5rem;
+  }
+
+  /* Quantum label visibility responsive - Adjust position and size on focus/filled */
+  .node-core:focus-within .quantum-label,
+  .node-core input:not(:placeholder-shown)+.quantum-label,
+  .node-core textarea:not(:placeholder-shown)+.quantum-label {
+    font-size: 0.65rem;
+    top: -0.6rem;
+  }
+
+  /* Quantum core responsive - Smaller submit button for mobile */
+  .quantum-core {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /* Core text responsive - Smaller font for mobile */
+  .core-text {
+    font-size: 0.7rem;
+  }
+
+  /* Footer responsive - Adjust padding for mobile */
+  .footer {
+    padding: 20px 0;
+  }
+
+  /* Footer text responsive - Smaller font for mobile */
+  .footer-text {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for max-width 480px - Responsive styles for smaller screens */
+@media (max-width: 480px) {
+
+  /* Quantum grid container responsive - Smaller container for smaller screens */
+  .quantum-grid-container {
+    max-width: 370px;
+    padding: 0.9rem;
+  }
+
+  /* Contact heading box button responsive - Smaller button for smaller screens */
+  .contact-heading-box .button {
+    font-size: 1.1rem;
+    padding: 8px 20px;
+  }
+
+  /* Quantum form responsive - Adjust gap for smaller screens */
+  .quantum-form {
+    gap: 1rem;
+  }
+
+  /* Quantum form input responsive - Smaller font for smaller screens */
+  .quantum-form input,
+  /* Quantum form textarea responsive - Smaller font for smaller screens */
+  .quantum-form textarea {
+    font-size: 0.75rem;
+  }
+
+  /* Quantum label responsive - Smaller font for smaller screens */
+  .quantum-label {
+    font-size: 0.75rem;
+  }
+
+  /* Quantum label visibility responsive - Adjust font on focus/filled for smaller screens */
+  .node-core:focus-within .quantum-label,
+  .node-core input:not(:placeholder-shown)+.quantum-label,
+  .node-core textarea:not(:placeholder-shown)+.quantum-label {
+    font-size: 0.6rem;
+  }
+
+  /* Quantum core responsive - Smaller submit button for smaller screens */
+  .quantum-core {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  /* Core text responsive - Smaller font for smaller screens */
+  .core-text {
+    font-size: 0.65rem;
+  }
+
+  /* Footer responsive - Adjust padding for smaller screens */
+  .footer {
+    padding: 15px 0;
+  }
+
+  /* Footer text responsive - Smaller font for smaller screens */
+  .footer-text {
+    font-size: 10px;
+  }
+
+  /* Footer bottom responsive - Consistent styles for smaller screens */
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+}
